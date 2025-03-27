@@ -1,0 +1,100 @@
+.contactsContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+}
+
+.contactsCard{
+    border: 3px solid var(--btn-hover);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.form{
+    padding: 25px 30px;
+}
+
+.form h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.form form input{
+    border: none;
+    background: var(--input-field);
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.form form textarea{
+    border: none;
+    background: var(--input-field);
+    padding: 10px 15px;
+    border-radius: 10px;
+    resize: none;
+}
+
+.form form input:focus{
+    outline: none;
+}
+
+.form form textarea:focus{
+    outline: none;
+}
+
+.form form button{
+    color: var(--fg);
+    background: var(--primary);
+}
+
+.info{
+    background: var(--primary);
+    justify-self: flex-end;
+    padding: 25px 30px;
+}
+
+.col h3{
+    color: var(--fg);
+    font-size: 1.5rem;
+}
+
+.contact{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.contact svg{
+    width: 50px;
+    height: 50px;
+}
+
+.divider{
+    height: 3px;
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 20px;
+    background: var(--fg);
+    border-radius: 25px;
+}
+
+.socialsRow{
+    display: flex;
+    gap: 10px;
+}
+
+@media(max-width: 1000px){
+    .form h3{
+        font-size: 1.25rem;
+    }
+}

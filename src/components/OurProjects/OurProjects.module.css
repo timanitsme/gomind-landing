@@ -1,0 +1,85 @@
+.projectsContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+}
+
+.projectsContainer h3{
+    font-weight: 700;
+}
+
+.project{
+    background: var(--primary);
+    padding: 25px 30px;
+    border-radius: 20px;
+    display: flex;
+    gap: 50px;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: flex-end;
+    height: 100%;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+.description ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.description li{
+    font-size: 1rem;
+    color: var(--fg);
+    display: flex;
+    align-items: center;
+}
+
+.description h3{
+    font-size: 1.5rem;
+    color: var(--fg);
+    text-align: center;
+}
+
+.description p{
+    color: var(--fg);
+}
+
+.projectPicture{
+    background: var(--fg);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.projectPicture svg{
+    width: 100px;
+    height: 100px;
+}
+
+.projectButton{
+    background: var(--fg);
+    color: var(--primary);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.projectButton:hover{
+    background: var(--btn-hover-secondary);
+    transition: 0.5s;
+}
+
+@media (max-width: 1000px) {
+    .description h3{
+        font-size: 1.25rem;
+    }
+}

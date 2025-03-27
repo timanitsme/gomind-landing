@@ -1,0 +1,31 @@
+
+.toggle{
+    background: var(--fg);
+    border-radius: 10px;
+    padding: 5px 10px;
+    display: flex;
+    gap: 10px;
+
+}
+
+.toggleButton{
+    background: var(--fg);
+    color: var(--primary);
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+.toggleButton.selected{
+    background: var(--primary);
+    color: var(--fg);
+}
+
+.toggleButton:hover{
+    background: var(--btn-hover-secondary);
+    transition: 0.5s;
+}
+
+.toggleButton.selected:hover{
+    background: var(--btn-hover);
+    transition: 0.5s;
+}
