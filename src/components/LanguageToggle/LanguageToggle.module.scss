@@ -1,18 +1,20 @@
+@use "../../utils/partialStyles/_pxToRem.scss" as *;
+
 
 .toggle{
     background: var(--fg);
-    border-radius: 10px;
-    padding: 5px 10px;
+    border-radius: rem(10);
+    padding: rem(5) rem(10);
     display: flex;
-    gap: 10px;
+    gap: rem(10);
 
 }
 
 .toggleButton{
     background: var(--fg);
     color: var(--primary);
-    padding: 5px 20px;
-    border-radius: 10px;
+    padding: rem(5) rem(20);
+    border-radius: rem(10);
 }
 
 .toggleButton.selected{

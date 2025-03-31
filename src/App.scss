@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
 
@@ -40,32 +41,48 @@
 }
 
 
-body{
-  font-size: 16px;
+
+@mixin fluid-text($max: 48, $min: 16){
+  $maxViewportWidth: 1400;
+  $minViewportWidth: 360;
+
+  $maxSize: math.div($max, 16);
+  $minSize: math.div($min, 16);
+  $maxWidth: math.div($maxViewportWidth, 16);
+  $minWidth: math.div($minViewportWidth, 16);
+
+  $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+  $yAxisIntersection: -$minWidth * $slope + $minSize;
+
+  font-size: clamp(
+          #{$minSize * 1rem},
+          #{$yAxisIntersection * 1rem} + #{$slope * 100vw},
+          #{$maxSize * 1rem}
+  );
 }
 
-p{
-  font-size: 1rem;
-}
-
+h1 { @include fluid-text(40, 28) }
+h2 { @include fluid-text(36, 26) }
+h3 { @include fluid-text(32, 24) }
+h4 { @include fluid-text(28, 22) }
+h5 { @include fluid-text(24, 20) }
+h6 { @include fluid-text(20, 18) }
+body { @include fluid-text(18, 16) }
 
 h1, h2, h3{
   color: var(--primary)
 }
 
 h1{
-  font-size: 4rem;
   font-family: "Hind", sans-serif;
 }
 
 h2{
   font-family: "Hind", sans-serif;
-  font-size: 3rem;
 }
 
 h3{
   font-family: "Inter", sans-serif;
-  font-size: 1.75rem;
   font-weight: 500;
 }
 
@@ -88,7 +105,6 @@ button:focus {
 
 .marker {
   margin-right: 10px;
-  font-size: 1.2em;
   align-self: center;
 }
 
@@ -97,14 +113,3 @@ button:focus {
   font-weight: 700;
 }
 
-@media (max-width: 1000px) {
-  h1{
-    font-size: 2rem;
-  }
-  h2{
-    font-size: 1.5rem;
-  }
-  h3{
-    font-size: 1.25rem;
-  }
-}

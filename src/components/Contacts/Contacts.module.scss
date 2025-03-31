@@ -1,12 +1,14 @@
+@use "../../utils/partialStyles/_pxToRem.scss" as *;
+
 .contactsContainer{
     display: flex;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 0 rem(40);
 }
 
 .contactsCard{
-    border: 3px solid var(--btn-hover);
-    border-radius: 20px;
+    border: rem(3) solid var(--btn-hover);
+    border-radius: rem(20);
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -14,34 +16,37 @@
 }
 
 .form{
-    padding: 25px 30px;
+    padding: rem(25) rem(30);
+    width: 100%;
 }
 
-.form h3{
-    font-size: 1.5rem;
+.form h5{
     font-weight: 700;
+    color: var(--primary);
 }
 
 .form form{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: rem(10);
     align-items: flex-start;
 }
 
 .form form input{
     border: none;
     background: var(--input-field);
-    padding: 10px 15px;
-    border-radius: 10px;
+    padding: rem(10) rem(15);
+    border-radius: rem(10);
 }
 
 .form form textarea{
     border: none;
     background: var(--input-field);
-    padding: 10px 15px;
-    border-radius: 10px;
+    padding: rem(10) rem(15);
+    border-radius: rem(10);
+    width: 100%;
     resize: none;
+
 }
 
 .form form input:focus{
@@ -60,41 +65,43 @@
 .info{
     background: var(--primary);
     justify-self: flex-end;
-    padding: 25px 30px;
+    padding: rem(25) rem(30);
 }
 
-.col h3{
+.col h5{
     color: var(--fg);
-    font-size: 1.5rem;
 }
 
 .contact{
     display: flex;
-    gap: 10px;
+    gap: rem(10);
     align-items: center;
 }
 
 .contact svg{
-    width: 50px;
-    height: 50px;
+    width: rem(50);
+    height: rem(50);
 }
 
 .divider{
-    height: 3px;
+    height: rem(3);
     width: 100%;
-    margin: 20px 0;
-    padding: 0 20px;
+    margin: rem(20) 0;
+    padding: 0 rem(20);
     background: var(--fg);
-    border-radius: 25px;
+    border-radius: rem(25);
 }
 
 .socialsRow{
     display: flex;
-    gap: 10px;
+    gap: rem(10);
 }
 
-@media(max-width: 1000px){
-    .form h3{
-        font-size: 1.25rem;
+@media (max-width: 700px) {
+    .contactsContainer{
+        padding: 0 rem(25);
+    }
+    .contactsCard{
+        flex-direction: column;
     }
 }

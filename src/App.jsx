@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import './App.css'
+import {useRef, useState} from 'react'
+import './App.scss'
 import Header from "./components/MainLayout/Header/Header.jsx";
 import Onboarding from "./components/Onboarding/Onboarding.jsx";
 import OurStack from "./components/OurStack/OurStack.jsx";
@@ -8,18 +8,20 @@ import Contacts from "./components/Contacts/Contacts.jsx";
 import Footer from "./components/MainLayout/Footer/Footer.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
+    const ourProjectsRef = useRef(null)
+    const stackRef = useRef(null)
+    const contactsRef = useRef(null)
+    const refs = [ourProjectsRef, stackRef, contactsRef]
 
-  return (
+    return (
     <div className="app">
-        <Header/>
+        <Header refs={refs}/>
         <Onboarding/>
-        <OurProjects/>
-        <Contacts/>
-        <OurStack/>
-        <Footer/>
+        <OurProjects ref={ourProjectsRef}/>
+        <OurStack ref={stackRef}/>
+        <Footer ref={contactsRef}/>
     </div>
-  )
+    )
 }
 
 export default App

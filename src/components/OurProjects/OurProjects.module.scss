@@ -1,7 +1,9 @@
+@use "../../utils/partialStyles/_pxToRem.scss" as *;
+
 .projectsContainer{
     display: flex;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 0 rem(40);
 }
 
 .projectsContainer h3{
@@ -10,10 +12,13 @@
 
 .project{
     background: var(--primary);
-    padding: 25px 30px;
-    border-radius: 20px;
+    padding: rem(25) rem(30);
+    border-radius: rem(20);
+}
+
+.row{
     display: flex;
-    gap: 50px;
+    gap: rem(50);
 }
 
 .col{
@@ -22,7 +27,7 @@
     align-items: center;
     justify-self: flex-end;
     height: 100%;
-    gap: 15px;
+    gap: rem(15);
     justify-content: space-between;
 }
 
@@ -33,20 +38,19 @@
     flex: 1;
 }
 
+
 .description ul{
     display: flex;
     flex-direction: column;
 }
 
 .description li{
-    font-size: 1rem;
     color: var(--fg);
     display: flex;
     align-items: center;
 }
 
-.description h3{
-    font-size: 1.5rem;
+.description h5{
     color: var(--fg);
     text-align: center;
 }
@@ -57,19 +61,18 @@
 
 .projectPicture{
     background: var(--fg);
-    border-radius: 20px;
-    padding: 15px;
+    border-radius: rem(20);
+    padding: rem(15);
 }
 
 .projectPicture svg{
-    width: 100px;
-    height: 100px;
+    width: rem(100);
+    height: rem(100);
 }
 
 .projectButton{
     background: var(--fg);
     color: var(--primary);
-    font-size: 1rem;
     font-weight: 600;
 }
 
@@ -78,8 +81,31 @@
     transition: 0.5s;
 }
 
-@media (max-width: 1000px) {
-    .description h3{
-        font-size: 1.25rem;
+@media (max-width: 700px) {
+
+    .project{
+        padding: rem(15) rem(20);
     }
+    .projectsContainer{
+        padding: 0 rem(25);
+    }
+
+    .row{
+        gap: rem(15);
+        flex-direction: column;
+    }
+
+    .col{
+        align-self: flex-end;
+    }
+
+    .projectPicture{
+        display: none;
+    }
+
+    .projectPicture svg{
+        width: rem(50);
+        height: rem(50);
+    }
+
 }

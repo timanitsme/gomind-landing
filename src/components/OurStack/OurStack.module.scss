@@ -1,0 +1,69 @@
+@use "../../utils/partialStyles/_pxToRem.scss" as *;
+
+.stackContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 rem(40);
+    min-height: rem(250);
+    margin-bottom: rem(50);
+
+}
+
+.stackContainer h3{
+    font-weight: 300;
+    padding: rem(30) 0 rem(15) 0;
+}
+
+.stackRow{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.card{
+    border: rem(3) solid var(--btn-hover);
+    border-radius: rem(20);
+    padding: rem(15);
+}
+
+.card svg{
+    width: rem(100);
+    height: rem(100);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.card:hover svg{
+    width: rem(120);
+    height: rem(120);
+    transition: 0.5s;
+}
+
+@media (max-width: 700px) {
+    .card svg{
+        width: rem(50);
+        height: rem(50);
+        transition: 0.5s;
+    }
+
+    .card:hover svg{
+        width: rem(65);
+        height: rem(65);
+        transition: 0.5s;
+    }
+
+    .card{
+        padding: rem(10);
+    }
+
+
+    .stackContainer{
+        padding: 0 rem(25);
+    }
+}

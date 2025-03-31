@@ -1,0 +1,51 @@
+@use "../../utils/partialStyles/_pxToRem.scss" as *;
+
+.onboardingContainer{
+    background: linear-gradient(to bottom, var(--primary) 0%, var(--btn-hover) 85%, var(--fg) 100%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: rem(150) rem(40);
+    gap: rem(15);
+}
+
+.onboardingContainer h1, .description h4{
+    color: var(--fg);
+}
+
+.heading{
+    text-align: center;
+    align-items: center;
+}
+
+.description{
+    width: 40%;
+}
+
+.whiteBg{
+    background: var(--fg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: rem(15);
+    padding: rem(5) rem(10);
+}
+
+.whiteBg h3{
+    font-weight: 600;
+}
+
+@media (max-width: 700px) {
+    .onboardingContainer{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    .description{
+        width: 100%;
+    }
+    .onboardingContainer{
+        padding: rem(100) rem(25);
+    }
+}
+

@@ -1,0 +1,111 @@
+@use "../../../utils/partialStyles/pxToRem.scss" as *;
+
+.footerContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: rem(30);
+    padding: rem(15) rem(25);
+    background: var(--primary);
+}
+
+.contact{
+    display: flex;
+    gap: rem(10);
+    align-items: center;
+}
+
+.contact svg{
+    width: rem(20);
+    height: fit-content;
+    flex-shrink: 0;
+}
+
+.socials{
+    margin-top: rem(15);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.socials svg{
+    height: rem(35);
+    width: min-content;
+}
+
+.footerContainer h5, .footerContainer p{
+    color: var(--fg);
+}
+
+.secondary{
+    color: #F1F1F3 !important;
+}
+
+
+.preFooter{
+    margin-bottom: rem(15);
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer p{
+    color: var(--fg);
+    text-align: center;
+}
+
+.footerCol{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+}
+
+.widthFour{
+    width: 40%;
+}
+
+.mobile{
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .preFooter {
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Две колонки */
+        gap: rem(15);
+    }
+
+    .footerCol {
+        width: auto;
+    }
+
+    .widthFour {
+        width: 100%;
+    }
+
+    .description {
+        display: none;
+    }
+
+    .mobile{
+        display: grid;
+        grid-column: span 2;
+    }
+
+    .mobile svg{
+        fill: var(--fg);
+        min-width: 20px;
+        min-height: 20px;
+    }
+
+
+}
+

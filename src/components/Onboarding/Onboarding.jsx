@@ -1,15 +1,17 @@
-import styles from "./Onboarding.module.css"
+import styles from "./Onboarding.module.scss"
+import {useTranslation} from "react-i18next";
 
 export default function Onboarding(){
+    const {t} = useTranslation()
     return(
         <div className={styles.onboardingContainer}>
             <div className={styles.description}>
-                <h3>Мы компания с инновационными мобильными решениями которая облегчает вашу жизнь и дополняет ее цифровыми благами</h3>
+                <h4>{t('onboarding-text')}</h4>
             </div>
-            <div>
+            <div className={styles.heading}>
                 <h1>Go Work LLC</h1>
                 <div className={styles.whiteBg}>
-                    <h3>Добро пожаловать!</h3>
+                    <h3>{t('welcome')}!</h3>
                 </div>
             </div>
         </div>

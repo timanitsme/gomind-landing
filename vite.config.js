@@ -6,4 +6,8 @@ import svgr from "vite-plugin-svgr"
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), svgr()],
+  server: {
+    host: true,
+    historyApiFallback: true,
+  }
 })
