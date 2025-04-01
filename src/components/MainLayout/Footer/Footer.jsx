@@ -12,7 +12,7 @@ export default function Footer({ref}){
         <div className={styles.footerContainer} ref={ref}>
             <div className={styles.preFooter}>
                 <div className={`${styles.footerCol} ${styles.description}`}>
-                    <h5>GoWork LLC</h5>
+                    <h5>{t('firm-name')}</h5>
                     <p className={`${styles.secondary}`}>{t('onboarding-text')}</p>
                 </div>
                 <div className={styles.footerCol} style={{width: "fit-content"}}>

@@ -9,7 +9,7 @@ export default function Onboarding(){
                 <h4>{t('onboarding-text')}</h4>
             </div>
             <div className={styles.heading}>
-                <h1>Go Work LLC</h1>
+                <h1>{t('firm-name')}</h1>
                 <div className={styles.whiteBg}>
                     <h3>{t('welcome')}!</h3>
                 </div>
