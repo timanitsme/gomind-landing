@@ -27,5 +27,26 @@
   "ogrn": "OGRN",
   "inn": "INN",
   "kpp": "KPP",
-  "where-to-find-us": "Where to find us"
+  "where-to-find-us": "Where to find us",
+  "payments": "Payments",
+  "pears": "Pears",
+  "user-agreement": "User agreement",
+  "offer": "Offer agreement",
+  "security-policy": "Security policy",
+  "main": "Main",
+  "payments-1": "Pears are the internal currency of the platform, which is used to purchase in-app advertisements and award rewards to quiz winners.",
+  "usage-features": "Usage features",
+  "usage-feature-1": "The pears spent on advertising are distributed among the quiz winners",
+  "usage-feature-2": "The winners can withdraw the earned pennies by selling them to the platform at a set exchange rate",
+  "exchange-rate": "EXCHANGE RATE",
+  "buy": "BUY",
+  "sell": "SELL",
+  "pear": "pear",
+  "pears-purpose-1": "The purpose of pears",
+  "pears-purpose-2": "Pears are used for the following purposes",
+  "pears-purpose-3": "Purchase of in-app ads",
+  "pears-purpose-4": "The reward for winning the quiz",
+  "pears-purpose-5": "The possibility of selling pears to the platform at a fixed price (10 rubles for 1 pear)",
+  "pears-purpose-6": "At the same time, all the pears spent on advertising are transferred to the winners of the quizzes. The winners can cash out their pears by selling them to the platform at the above price."
+
 }

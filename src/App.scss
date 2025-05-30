@@ -19,6 +19,7 @@
   --success-hover: #F2FFF2;
   --input-field: #F1F8FF;
 }
+
 * {
   font-family: "Inter", sans-serif;
   margin: 0;
@@ -26,7 +27,11 @@
   box-sizing: border-box;
 }
 
-
+html, body {
+  height: 100%; /* Занимают всю высоту окна */
+  margin: 0; /* Убедитесь, что нет отступов по умолчанию */
+  padding: 0;
+}
 
 .app {
   position: relative;
@@ -40,7 +45,16 @@
   overflow-y: auto;
 }
 
+.contentContainer{
+  width: 100%;
+  min-height: 80vh;
+  padding: 0 200px;
+}
 
+.contentSection{
+  width: 100%;
+  min-height: 80vh;
+}
 
 @mixin fluid-text($max: 48, $min: 16){
   $maxViewportWidth: 1400;
@@ -111,5 +125,11 @@ button:focus {
 .title{
   padding: 30px 0 15px 0;
   font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .contentContainer{
+    padding: 0 20px;
+  }
 }
 

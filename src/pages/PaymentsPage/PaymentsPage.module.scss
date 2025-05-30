@@ -1,0 +1,192 @@
+@use "../../utils/partialStyles/_pxToRem.scss" as *;
+
+.projectsContainer{
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 rem(40);
+}
+
+.center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projectsContainer h3{
+  font-weight: 700;
+}
+
+.project{
+  background: var(--primary);
+  padding: rem(25) rem(30);
+  border-radius: rem(20);
+}
+
+.row{
+  display: flex;
+  gap: rem(50);
+}
+
+.col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: flex-end;
+  height: 100%;
+  gap: rem(15);
+  justify-content: space-between;
+}
+
+.description{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+
+.description ul{
+  display: flex;
+  flex-direction: column;
+}
+
+.description li{
+  color: var(--fg);
+  display: flex;
+  align-items: center;
+}
+
+.description h5{
+  color: var(--fg);
+  text-align: center;
+}
+
+.description p{
+  color: var(--fg);
+}
+
+.projectPicture{
+  background: var(--fg);
+  border-radius: rem(20);
+  padding: rem(15);
+}
+
+.projectPicture svg{
+  width: rem(100);
+  height: rem(100);
+}
+
+.projectButton{
+  background: var(--fg);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.projectButton:hover{
+  background: var(--btn-hover-secondary);
+  transition: 0.5s;
+}
+
+.exchangeSection{
+  display: flex;
+  gap: 25px;
+}
+
+.exchangeCol{
+  background: var(--fg);
+  padding: 5px 15px;
+  border-radius: 7px;
+}
+
+.exchangeSection p{
+  color: var(--primary);
+  width: fit-content;
+}
+
+.exchangeCol{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.purposeSection {
+  background: var(--bg); // Фоновый цвет отличается от projectsContainer
+  padding: rem(30) rem(40);
+  border-radius: rem(20);
+  box-shadow: 0 rem(5) rem(15) rgba(0, 0, 0, 0.1); // Легкая тень для акцента
+  align-self: center;
+  margin-top: rem(30);
+}
+
+.purposeSection h4 {
+  color: var(--primary); // Цвет заголовка
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: rem(20);
+}
+
+.purposeSection p {
+  color: var(--txt-primary);
+  line-height: 1.6; // Улучшение читаемости
+  margin-bottom: rem(15);
+}
+
+.purposeSection ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: rem(20);
+}
+
+.purposeSection li {
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+  color: var(--txt-secondary);
+  margin-bottom: rem(10);
+}
+
+
+
+@media (max-width: 700px) {
+
+  .project{
+    padding: rem(15) rem(20);
+  }
+  .projectsContainer{
+    padding: 0 rem(25);
+  }
+
+  .row{
+    gap: rem(15);
+    flex-direction: column;
+  }
+
+  .purposeSection {
+    padding: rem(20);
+    margin-top: rem(20);
+  }
+
+  .purposeSection h4 {
+    font-size: rem(20);
+  }
+
+  .purposeSection p {
+    font-size: rem(14);
+  }
+
+  .col{
+    align-self: flex-end;
+  }
+
+  .projectPicture{
+    display: none;
+  }
+
+  .projectPicture svg{
+    width: rem(50);
+    height: rem(50);
+  }
+
+}

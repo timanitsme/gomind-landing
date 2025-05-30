@@ -5,6 +5,7 @@ import VkIcon from "../../../assets/contacts/vk-icon.svg?react";
 import TgIcon from "../../../assets/contacts/tg-icon.svg?react";
 import LocationIcon from "../../../assets/contacts/location-icon.svg?react";
 import {useTranslation} from "react-i18next";
+import {Link} from "react-router-dom";
 
 export default function Footer({ref}){
     const {t} = useTranslation()
@@ -63,7 +64,11 @@ export default function Footer({ref}){
                     </div>
                 </div>
             </div>
-
+            <div className={styles.between}>
+                <Link to="/documents/user-agreement">{t("user-agreement")}</Link>
+                <Link to="/documents/offer">{t("offer")}</Link>
+                <Link to="/documents/security-policy">{t("security-policy")}</Link>
+            </div>
             <div className={styles.footer}>
                 <p>© 2025 Gwork LLC. All rights reserved</p>
             </div>

@@ -55,6 +55,24 @@
 
 }
 
+.between{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.between a{
+    color: var(--fg);
+    text-align: center;
+}
+
+.between a:hover{
+    color: var(--btn-hover);
+    transition: 0.5s;
+}
+
 .footer p{
     color: var(--fg);
     text-align: center;

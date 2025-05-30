@@ -1,0 +1,20 @@
+.headingSection{
+  background: var(--primary);
+  margin: 20px 0;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+
+.headingSection h1{
+  color: var(--fg);
+  text-align: center;
+}
+
+.markdownSection p{
+  text-indent: 25px;
+  margin-bottom: 10px;
+}
+
+.markdownSection h3{
+  margin-top: 25px;
+}

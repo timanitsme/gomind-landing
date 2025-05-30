@@ -33,6 +33,10 @@
     justify-content: center;
 }
 
+.gridColumn svg{
+    cursor: pointer;
+}
+
 .paths{
     gap: rem(15);
 }
