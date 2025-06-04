@@ -14,6 +14,7 @@
   "send": "Send",
   "enter-name": "Enter your name",
   "enter-email": "Enter your email",
+  "enter-password": "Enter password",
   "enter-message": "Enter your message",
   "projects": "Projects",
   "stack": "Stack",
@@ -47,6 +48,21 @@
   "pears-purpose-3": "Purchase of in-app ads",
   "pears-purpose-4": "The reward for winning the quiz",
   "pears-purpose-5": "The possibility of selling pears to the platform at a fixed price (10 rubles for 1 pear)",
-  "pears-purpose-6": "At the same time, all the pears spent on advertising are transferred to the winners of the quizzes. The winners can cash out their pears by selling them to the platform at the above price."
-
+  "pears-purpose-6": "At the same time, all the pears spent on advertising are transferred to the winners of the quizzes. The winners can cash out their pears by selling them to the platform at the above price.",
+  "auth": "Login",
+  "profile": "Profile",
+  "balance": "Balance",
+  "information": "Information",
+  "logout": "Logout",
+  "nickname": "Nickname",
+  "password": "Password",
+  "authorization": "Authorization",
+  "log": "Login",
+  "fill-in-fields": "Fill in all fields",
+  "incorrect-email": "You have entered an incorrect email address",
+  "incorrect-email-password": "Incorrect email or password",
+  "auth-success": "Authorization successful",
+  "logout-success": "You have successfully logged out of your account",
+  "logout-error": "Failed to log out of account",
+  "go-mind-currency": "Main currency - Pears"
 }

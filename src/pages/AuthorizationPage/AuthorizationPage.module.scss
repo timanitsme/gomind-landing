@@ -1,0 +1,52 @@
+@use "../../utils/partialStyles/_pxToRem.scss" as *;
+
+.authSection{
+  background: var(--primary);
+  background-image: url("../../assets/auth-bg-without-glitch.svg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.authForm{
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  min-width: fit-content;
+  min-height: fit-content;
+  width: 35vw;
+  padding: rem(15);
+  border-radius: rem(10);
+  gap: rem(10);
+  justify-content: center;
+  background: var(--primary);
+}
+
+.inputContainer{
+  display: flex;
+  flex-direction: column;
+  gap: rem(2);
+}
+
+.authButton{
+  padding: rem(5);
+  border-radius: rem(5);
+  background: var(--primary);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.authButton:hover{
+  background: var(--fg-accent);
+  transition: 0.5s;
+}
+
+.formButton{
+  color: var(--primary);
+  background: var(--fg);
+}
+
+.formButton:hover{
+  background: var(--btn-hover-third);
+  transition: 0.5s;
+}

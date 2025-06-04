@@ -7,7 +7,18 @@ import svgr from "vite-plugin-svgr"
 export default defineConfig({
   plugins: [react(), svgr()],
   server: {
-    host: true,
+    host: '0.0.0.0',
     historyApiFallback: true,
+    proxy: {
+      '/api': {
+        target: 'https://www.gwork.press:8443',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+        secure: false,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      },
+    }
   }
 })

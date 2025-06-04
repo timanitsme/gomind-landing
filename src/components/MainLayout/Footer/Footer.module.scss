@@ -1,9 +1,14 @@
 @use "../../../utils/partialStyles/pxToRem.scss" as *;
 
+.marg{
+    height: rem(30);
+    width: 100%;
+    background: var(--primary);
+}
+
 .footerContainer{
     display: flex;
     flex-direction: column;
-    margin-top: rem(30);
     padding: rem(15) rem(25);
     background: var(--primary);
 }

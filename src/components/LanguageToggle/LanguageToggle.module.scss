@@ -7,7 +7,6 @@
     padding: rem(5) rem(10);
     display: flex;
     gap: rem(10);
-
 }
 
 .toggleButton{
@@ -30,4 +29,15 @@
 .toggleButton.selected:hover{
     background: var(--btn-hover);
     transition: 0.5s;
+}
+
+@media (max-width: 600px) {
+    .toggleButton{
+        padding: rem(5) rem(7);
+    }
+    .toggle{
+        padding: rem(5) rem(5);
+        display: flex;
+        gap: rem(5);
+    }
 }

@@ -2,9 +2,11 @@ import styles from "./OurProjects.module.scss"
 import GoMindLogo from "../../assets/gomind-logo.svg?react"
 import RuStoreLogo from "../../assets/rustore-logo.svg?react"
 import {useTranslation} from "react-i18next";
+import {useNavigate} from "react-router";
 
 export default function OurProjects({ref}){
     const {t} = useTranslation()
+    const navigate = useNavigate()
 
     return(
         <div className={styles.projectsContainer} ref={ref}>
@@ -25,6 +27,7 @@ export default function OurProjects({ref}){
                             <GoMindLogo/>
                         </div>
                         <a href="https://www.rustore.ru/catalog/app/com.example.gomind"><RuStoreLogo/></a>
+                        <button className={styles.moreButton} onClick={() => navigate("/goMind")}>{t("more")}</button>
                     </div>
                 </div>
 

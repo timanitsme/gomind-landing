@@ -81,6 +81,17 @@
     transition: 0.5s;
 }
 
+.moreButton{
+    font-weight: 600;
+    color: var(--primary);
+    background: var(--fg);
+}
+
+.moreButton:hover{
+    background: var(--btn-hover-third);
+    transition: 0.5s;
+}
+
 @media (max-width: 700px) {
 
     .project{
@@ -96,6 +107,7 @@
     }
 
     .col{
+        flex-direction: row;
         align-self: flex-end;
     }
 

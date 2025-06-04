@@ -11,6 +11,7 @@
   --primary: #3E70C7;
   --btn-hover: #9DC3E7;
   --btn-hover-secondary: #F5F5F5;
+  --btn-hover-third: #EEF4FF;
   --err-primary: #F64E60;
   --err-secondary: #FFB9C0;
   --err-hover: #FFE3E6;
@@ -81,6 +82,9 @@ h3 { @include fluid-text(32, 24) }
 h4 { @include fluid-text(28, 22) }
 h5 { @include fluid-text(24, 20) }
 h6 { @include fluid-text(20, 18) }
+p {@include fluid-text(18, 16)}
+input {@include fluid-text(18, 16)}
+button {@include fluid-text(18, 16)}
 body { @include fluid-text(18, 16) }
 
 h1, h2, h3{
@@ -100,6 +104,10 @@ h3{
   font-weight: 500;
 }
 
+h4{
+  font-family: "Inter", sans-serif;
+}
+
 button{
   border: none;
   outline: none;
@@ -115,6 +123,15 @@ button:focus {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.hrtLine{
+  height: 3px;
+  width: 100%;
+  background: var(--primary);
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .marker {
