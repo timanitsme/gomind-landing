@@ -1,12 +1,13 @@
 import styles from "./ProfilePage.module.scss"
 import {useTranslation} from "react-i18next";
 import PearIcon from "../../assets/pear-icon.svg?react"
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {logout} from "../../store/services/authSlice.js";
 import {useNavigate} from "react-router";
 import {toast} from "react-toastify";
 
 export default function ProfilePage(){
+    const { isAuthorized, userProfile, isLoading: profileIsLoading } = useSelector((state) => state.auth);
     const {t} = useTranslation()
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -23,35 +24,44 @@ export default function ProfilePage(){
         }
     }
 
+    if (!isAuthorized && !profileIsLoading && !userProfile){
+        navigate("/login");
+    }
+
+    console.log(JSON.stringify(userProfile))
+
     return(
         <div className={`contentContainer ${styles.bottomTop}`}>
-            <h1>{t("profile")}</h1>
-            <div className="hrtLine"/>
-            <div className={styles.flexRow}>
-                <div className={styles.balance}>
-                    <p>{t("balance")}</p>
-                    <h1>450</h1>
-                    <div className={styles.circle}>
-                        <PearIcon/>
+            {isAuthorized && !profileIsLoading &&
+                <>
+                    <h1>{t("profile")}</h1>
+                    <div className="hrtLine"/>
+                    <div className={styles.flexRow}>
+                        <div className={styles.balance}>
+                            <p>{t("balance")}</p>
+                            <h1>{userProfile?.pears}</h1>
+                            <div className={styles.circle}>
+                                <PearIcon/>
+                            </div>
+                        </div>
+                        <div className={styles.info}>
+                            <h4>{t("information")}</h4>
+                            <div className={styles.characteristic}>
+                                <p className={styles.title}>Email</p>
+                                <p className={styles.bold}>{userProfile?.email}</p>
+                                <div className={styles.line}/>
+                            </div>
+                            <div className={styles.characteristic}>
+                                <p className={styles.title}>{t("nickname")}</p>
+                                <p className={styles.bold}>{userProfile?.nickname}</p>
+                                <div className={styles.line}/>
+                            </div>
+                            <button className={styles.logoutButton} onClick={handleExit}>{t("logout")}</button>
+                        </div>
                     </div>
-                </div>
-                <div className={styles.info}>
-                    <h4>{t("information")}</h4>
-                    <div className={styles.characteristic}>
-                        <p className={styles.title}>Email</p>
-                        <p className={styles.bold}>example@mail.ru</p>
-                        <div className={styles.line}/>
-                    </div>
-                    <div className={styles.characteristic}>
-                        <p className={styles.title}>{t("nickname")}</p>
-                        <p className={styles.bold}>Иванов Иван</p>
-                        <div className={styles.line}/>
-                    </div>
-                    <button className={styles.logoutButton} onClick={handleExit}>{t("logout")}</button>
-                </div>
+                </>
 
-
-            </div>
+            }
         </div>
     )
 }

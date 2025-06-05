@@ -5,7 +5,7 @@ import TextInput from "../../components/Inputs/TextInput/TextInput.jsx";
 import PasswordInput from "../../components/Inputs/PasswordInput/PasswordInput.jsx";
 import {toast} from "react-toastify";
 import {goMindApi, useLoginMutation} from "../../store/services/goMind.js";
-import {logout, setUserProfile} from "../../store/services/authSlice.js";
+import {initializeAuthState, logout, setUserProfile} from "../../store/services/authSlice.js";
 import {useDispatch} from "react-redux";
 import {useTranslation} from "react-i18next";
 
@@ -38,8 +38,10 @@ export default function AuthorizationPage(){
                 const profileResponse = await dispatch(goMindApi.endpoints.getUserProfile.initiate());
                 if (profileResponse.data && response) {
                     await dispatch(setUserProfile(profileResponse.data));
-                    navigate("/")
+                    navigate("/profile")
+                    window.location.reload()
                     toast.success(t("auth-success"))
+
                 }
 
             } catch (err) {
