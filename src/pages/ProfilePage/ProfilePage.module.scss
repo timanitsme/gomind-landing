@@ -1,5 +1,6 @@
 .flexRow{
-  display: flex;
+  display: grid;
+  grid-template-columns: 4fr 6fr;
   gap: 20px;
 }
 
@@ -15,7 +16,6 @@
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  width: 40%;
 }
 
 .info{
@@ -25,7 +25,6 @@
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  width: 60%;
   gap: 20px;
 }
 
@@ -89,6 +88,7 @@
 
 @media (max-width: 600px) {
   .flexRow{
+    display: flex;
     flex-direction: column;
   }
   .balance{
@@ -99,3 +99,33 @@
   }
 }
 
+.deleteBox{
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  grid-column: span 2;
+  padding: 10px;
+  border: 2px solid var(--btn-secondary);
+  gap: 10px;
+
+  p{
+    color: var(--txt-secondary);
+  }
+}
+
+.bottom{
+  padding: 10px;
+  margin-top: 10px;
+  background: var(--btn-secondary);
+  button{
+    background: var(--err-primary);
+    color: var(--fg);
+    transition: 0.3s;
+    &:hover{
+      background: var(--err-secondary);
+    }
+  }
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-end;
+}

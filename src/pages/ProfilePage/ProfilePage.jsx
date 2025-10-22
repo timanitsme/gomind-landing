@@ -30,6 +30,7 @@ export default function ProfilePage(){
 
     console.log(JSON.stringify(userProfile))
 
+
     return(
         <div className={`contentContainer ${styles.bottomTop}`}>
             {isAuthorized && !profileIsLoading &&
@@ -57,6 +58,11 @@ export default function ProfilePage(){
                                 <div className={styles.line}/>
                             </div>
                             <button className={styles.logoutButton} onClick={handleExit}>{t("logout")}</button>
+                        </div>
+                        <div className={styles.deleteBox}>
+                            <h4>{t("deletePage.profileSection.title")}</h4>
+                            <p>{t("deletePage.profileSection.description")}</p>
+                            <div className={styles.bottom}><button onClick={() => navigate("/account-delete")}>{t("deletePage.profileSection.button")}</button></div>
                         </div>
                     </div>
                 </>

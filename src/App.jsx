@@ -16,6 +16,7 @@ const DocumentPage = lazy(() => import("./pages/DocumentPage/DocumentPage.jsx"))
 const AuthorizationPage = lazy(() => import("./pages/AuthorizationPage/AuthorizationPage.jsx"));
 const ProfilePage = lazy(() => import("./pages/ProfilePage/ProfilePage.jsx"));
 const GoMindPage = lazy(() => import("./pages/GoMindPage/GoMindPage.jsx"));
+const AccountDeletePage = lazy(() => import("./pages/AccountDeletePage/AccountDeletePage.jsx"))
 
 
 function App() {
@@ -36,8 +37,8 @@ function App() {
         {path: "/documents/:alias", element: DocumentPage},
         {path: "/login", element: AuthorizationPage},
         {path: "/profile", element: ProfilePage},
-        {path: "/goMind", element: GoMindPage}
-
+        {path: "/goMind", element: GoMindPage},
+        {path: "/account-delete", element: AccountDeletePage}
     ]
 
     return (

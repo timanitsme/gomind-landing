@@ -64,5 +64,28 @@
   "auth-success": "Authorization successful",
   "logout-success": "You have successfully logged out of your account",
   "logout-error": "Failed to log out of account",
-  "go-mind-currency": "Main currency - Pears"
+  "go-mind-currency": "Main currency - Pears",
+  "deletePage": {
+    "profileSection": {
+      "title": "Delete Personal Account",
+      "description": "Permanently remove your Personal account and all of its contents from the Gwork platforms. This action is not reversible, so please, continue with caution.",
+      "button": "Delete"
+    },
+    "page": {
+      "title": "Account Deletion",
+      "description": "You can delete your account in any convenient way:",
+      "point-1": "1. Through the goMind app. In the mobile app, tap ",
+      "point-1-2": "Profile -> Delete Account",
+      "point-2": "2. Via support. Email the administrator at the following address:",
+      "point-2-2": "In the message, state that you want to delete your account and provide your username.",
+      "point-3": "3. Using the button below:",
+      "button": "Delete Account",
+      "success": "Account successfully deleted",
+      "err": "Failed to delete account",
+      "button-auth": "Please log into your account first",
+      "modal-warn": "Are you sure you want to do this?",
+      "modal-yes": "Yes",
+      "modal-no": "No"
+    }
+  }
 }

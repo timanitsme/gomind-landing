@@ -1,0 +1,55 @@
+.deleteSection{
+  height: calc(100vh - 70px);
+  background: var(--bg);
+}
+
+.description{
+  margin-top: 50px;
+  padding: 20px;
+  background: var(--fg);
+  border-radius: 10px;
+  a{
+    color: var(--primary);
+    text-decoration-line: underline;
+  }
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.deleteButton{
+  background: var(--err-primary);
+  color: var(--fg);
+  width: fit-content;
+  transition: 0.3s;
+  &:hover{
+    background: var(--err-secondary);
+  }
+}
+
+.deleteContent{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  p{
+    grid-column: span 2;
+  }
+}
+
+.yes{
+  background: var(--err-primary);
+  color: var(--fg);
+  transition: 0.3s;
+  &:hover{
+    background: var(--err-secondary);
+  }
+}
+
+.no{
+  background: var(--success-primary);
+  color: var(--fg);
+  transition: 0.3s;
+  &:hover{
+    background: var(--success-secondary);
+  }
+}

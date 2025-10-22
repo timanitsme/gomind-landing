@@ -62,6 +62,14 @@ export const goMindApi = createApi({
                 })
             }
         }),
+        deleteAccount: builder.mutation({
+            query: ({userId}) => {
+                return({
+                    url: `authentication/user/${userId}/hard`,
+                    method: "DELETE"
+                })
+            }
+        }),
         getAllUsers: (builder.query({
             query:  ({page, size}) =>{
                 const params = new URLSearchParams();
@@ -139,4 +147,4 @@ export const {useLoginMutation, useGetUserProfileQuery, useRefreshTokenMutation,
     useGetAllUsersQuery, useApproveAdvertisementMutation, useRejectAdvertisementMutation , useGetAdvertisementsByCostQuery,
     useGetSuspiciousWinsQuery, useGetFileSystemImageByIdQuery, useGetAdvertisementByIdQuery,
     useCatchPearsMutation, useGetWithdrawalsQuery, useApproveWithdrawalMutation,
-    useRejectWithdrawalMutation, useLogoutMutation} = goMindApi
+    useRejectWithdrawalMutation, useLogoutMutation, useDeleteAccountMutation} = goMindApi
